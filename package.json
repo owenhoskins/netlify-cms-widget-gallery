@@ -1,0 +1,35 @@
+{
+  "name": "netlify-cms-widget-gallery",
+  "description": "Gallery widget for Netlify CMS",
+  "version": "0.1.1",
+  "repository": "https://github.com/netlify/netlify-cms/tree/master/packages/netlify-cms-widget-gallery",
+  "bugs": "https://github.com/netlify/netlify-cms/issues",
+  "main": "dist/netlify-cms-widget-gallery.js",
+  "license": "MIT",
+  "keywords": [
+    "netlify",
+    "netlify-cms"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "develop": "yarn build:esm --watch",
+    "build": "cross-env NODE_ENV=production webpack",
+    "build:esm": "cross-env NODE_ENV=esm babel src --out-dir dist/esm --ignore src/**/__tests__/* --root-mode upward -s"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.9",
+    "@emotion/styled": "^10.0.9",
+    "common-tags": "^1.8.0",
+    "immutable": "^3.7.6",
+    "netlify-cms-ui-default": "^2.0.0",
+    "prop-types": "^15.5.10",
+    "react": "^16.4.1",
+    "react-dom": "^16.0.0",
+    "react-immutable-proptypes": "^2.1.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "webpack": "^4.16.1"
+  }
+}
