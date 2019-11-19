@@ -166,8 +166,10 @@ export default function withFileControl({ forImage } = {}) {
 
     handleRemove = e => {
       e.preventDefault();
-      this.props.onClearMediaControl(this.controlID);
-      return this.props.onChange('');
+      if (window.confirm('Are you sure you wish to clear this field?')) {
+        this.props.onClearMediaControl(this.controlID);
+        return this.props.onChange('');
+      }
     };
 
     renderFileLink = value => {

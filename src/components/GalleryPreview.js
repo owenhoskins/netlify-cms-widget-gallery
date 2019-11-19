@@ -55,7 +55,7 @@ const ImagePreviewContent = props => {
 
   return <Gallery
     margin={16}
-    columns={4}
+    columns={5}
     ratios={ratios}
     balanced
     ImageComponent={renderImage}

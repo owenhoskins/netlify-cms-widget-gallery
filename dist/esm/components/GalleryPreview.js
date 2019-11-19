@@ -71,7 +71,7 @@ const ImagePreviewContent = props => {
 
   return _react.default.createElement(_Gallery.default, {
     margin: 16,
-    columns: 4,
+    columns: 5,
     ratios: ratios,
     balanced: true,
     ImageComponent: renderImage,
